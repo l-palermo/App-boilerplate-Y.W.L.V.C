@@ -46,12 +46,18 @@ Webpack is still the most solid bundler. It might lack in speed and bundle size 
 
 The bundler choice as every other choice depends on the purpose of the app. In this case, the purpose is learning what bundling means an what are the steps required to bundle the source code in one file the CSS in another, how to make this accessible by the browser and create a stable built with which safely deploy the app.
 
-Webpack requires to specify transpilers such as Babel and post-CSS. This need might have bad and good sides like more config work but also brings attention to what each dependency brings to the table and what we need to run it. Transpiler like babel/polyfill might result very expensive, so this is an opportunity to make better choices. Out of the box bundler just apply the needed transpiler.
+Webpack can automatically transpile code but it allows to specify other transpilers such as Babel and post-CSS. This need might have bad and good sides like more config work but also brings attention to what each dependency brings to the table and what we need to run it. Transpiler like babel/polyfill might result very expensive, so this is an opportunity to make better choices. Out of the box bundler just apply the needed transpiler.
+
+TBC
 
 The other two bundler contenders are Rollup and Snowpack that seem very interesting tools and I'll implement my knowledge of them in the next boilerplates.
 
-> Snowpack seems to be an amazing tool for development allowing lots of functionalities out of the box (jsx, ccs-modules, CSS, assets, project-relative imports) and some others like hot-reloading with the help of specific plugins. The most is an important feature is leveraging EMS imports and remove unnecessary building works for the dev workflow. For production built it uses webpack or parcel plugins. Overall seems a very cool tool to approach.
+> Snowpack seems to be an amazing tool for development allowing lots of functionalities out of the box (jsx, ccs-modules, CSS, assets, project-relative imports) and some others like hot-reloading with the help of specific plugins. The most important feature is leveraging EMS imports and removing unnecessary building works for the dev workflow. For production built it uses webpack or parcel plugins. Overall seems a very cool tool to approach.
 The question is:
-How configurable is the webpack plugin? Is it worth it having two building tools? On the other end, webpack-web-server is also pretty straight forward even if not as fast.
+How configurable is the webpack plugin? Is it worth it having two building tools? On the other end, webpack-dev-server is also pretty straight forward even if not as fast as snowpack.TBC
 
-Rollup seems similar to webpack with some pros and cons.
+Rollup seems similar to webpack with some pros and cons. TBC
+
+To install webpack:
+<br>
+`yarn add webpack webpack-cli -D
