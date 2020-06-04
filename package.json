@@ -1,0 +1,13 @@
+{
+  "name": "app-boilerplate-ywdot",
+  "version": "1.0.0",
+  "description": "app boilerplate ready for development",
+  "private": true,
+  "repository": "git@github.com:l-palermo/App-boilerplate-Y.W.DO.T..git",
+  "author": "l-palermo <l-palermo@hotmail.it>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11"
+  }
+}
