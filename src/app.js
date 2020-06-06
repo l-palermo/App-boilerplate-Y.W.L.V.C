@@ -1,13 +1,28 @@
+import React from "react";
+
 import "./app.css";
-import svg from "./assets/svg-file.svg";
+import reactLogo from "./assets/react.svg";
+import yarn from "./assets/yarn.svg";
+import webpack from "./assets/webpack.svg";
 
-export default () => {
-  const div = document.createElement("div");
-  div.innerHTML = `<h1 class='helloWorld'>Hello World</h1>`;
-  const element = document.getElementById("root");
-  element.appendChild(div);
-
-  const myIcon = new Image();
-  myIcon.src = svg;
-  element.appendChild(myIcon);
+const App = () => {
+  return (
+    <React.Fragment>
+      <div className="reactLogoContainer">
+        <img className="reactLogo" src={reactLogo} alt="react logo" />
+      </div>
+      <div className="logosContainer">
+        <img className="yarnLogo" src={yarn} alt="yarn" />
+        <img className="webpackLogo" src={webpack} alt="webpack logo" />
+      </div>
+    </React.Fragment>
+  );
 };
+
+export default App;
+
+// export default () => {
+//   const myIcon = new Image();
+//   myIcon.src = svg;
+//   element.appendChild(myIcon);
+// };

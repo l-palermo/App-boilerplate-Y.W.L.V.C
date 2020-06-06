@@ -1,6 +1,5 @@
-import genericFunction from "./app.js";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./app.js";
 
-const element = document.getElementById("root");
-element.innerHTML = "Hello World";
-
-genericFunction();
+ReactDOM.render(<App />, document.getElementById("root"));
