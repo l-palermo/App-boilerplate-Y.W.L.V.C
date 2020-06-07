@@ -1,0 +1,25 @@
+.logosContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.yarnLogo {
+    width: 9rem;
+    height: 9rem;
+}
+
+.webpackLogo {
+    width: auto;
+    height: 9rem;
+}
+
+.testingLibraryLogo {
+    width: auto;
+    height: 5rem;
+}
+
+.jestLogo {
+    width: auto;
+    height: 5rem;
+}

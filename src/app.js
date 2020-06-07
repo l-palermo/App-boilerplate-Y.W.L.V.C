@@ -2,8 +2,7 @@ import React from "react";
 
 import "./app.css";
 import reactLogo from "./assets/react.svg";
-import yarn from "./assets/yarn.svg";
-import webpack from "./assets/webpack.svg";
+import Logos from "./components/logos";
 
 const App = () => {
   return (
@@ -11,18 +10,15 @@ const App = () => {
       <div className="reactLogoContainer">
         <img className="reactLogo" src={reactLogo} alt="react logo" />
       </div>
-      <div className="logosContainer">
-        <img className="yarnLogo" src={yarn} alt="yarn" />
-        <img className="webpackLogo" src={webpack} alt="webpack logo" />
+      <div className="text">
+        <div className="title">App Boilerplate</div>
+        <div className="description">
+          This React application boilerplate uses the following core tools:
+        </div>
       </div>
+      <Logos />
     </React.Fragment>
   );
 };
 
 export default App;
-
-// export default () => {
-//   const myIcon = new Image();
-//   myIcon.src = svg;
-//   element.appendChild(myIcon);
-// };
