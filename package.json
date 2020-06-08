@@ -1,39 +1,50 @@
 {
-  "name": "app-boilerplate-ywdot",
-  "version": "1.0.0",
-  "description": "app boilerplate ready for development",
-  "private": true,
-  "repository": "git@github.com:l-palermo/App-boilerplate-Y.W.DO.T..git",
-  "author": "l-palermo <l-palermo@hotmail.it>",
-  "license": "MIT",
-  "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack --env.production",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@babel/core": "7.10.2",
-    "@babel/preset-env": "7.10.2",
-    "@babel/preset-react": "7.10.1",
-    "@testing-library/jest-dom": "5.9.0",
-    "@testing-library/react": "10.2.1",
-    "babel-jest": "26.0.1",
-    "babel-loader": "8.1.0",
-    "clean-webpack-plugin": "3.0.0",
-    "css-loader": "3.5.3",
-    "file-loader": "6.0.0",
-    "html-webpack-plugin": "4.3.0",
-    "identity-obj-proxy": "3.0.0",
-    "jest": "26.0.1",
-    "pre-commit": "1.2.2",
-    "style-loader": "1.2.1",
-    "webpack": "5.0.0-beta.17",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.11.0"
-  },
-  "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  },
-  "pre-commit": ["build", "test"]
+    "name": "app-boilerplate-ywdot",
+    "version": "1.0.0",
+    "description": "app boilerplate ready for development",
+    "private": true,
+    "repository": "git@github.com:l-palermo/App-boilerplate-Y.W.DO.T..git",
+    "author": "l-palermo <l-palermo@hotmail.it>",
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack-dev-server --open",
+        "build": "webpack --env.production",
+        "test": "jest --coverage",
+        "lint": "eslint ./src",
+        "lint:css": "stylelint **/src/*.css"
+    },
+    "devDependencies": {
+        "@babel/core": "7.10.2",
+        "@babel/preset-env": "7.10.2",
+        "@babel/preset-react": "7.10.1",
+        "@testing-library/jest-dom": "5.9.0",
+        "@testing-library/react": "10.2.1",
+        "babel-jest": "26.0.1",
+        "babel-loader": "8.1.0",
+        "clean-webpack-plugin": "3.0.0",
+        "css-loader": "3.5.3",
+        "eslint": "7.2.0",
+        "eslint-plugin-react": "7.20.0",
+        "file-loader": "6.0.0",
+        "html-webpack-plugin": "4.3.0",
+        "identity-obj-proxy": "3.0.0",
+        "jest": "26.0.1",
+        "pre-commit": "1.2.2",
+        "style-loader": "1.2.1",
+        "stylelint": "13.6.0",
+        "stylelint-config-standard": "20.0.0",
+        "webpack": "5.0.0-beta.17",
+        "webpack-cli": "3.3.11",
+        "webpack-dev-server": "3.11.0"
+    },
+    "dependencies": {
+        "react": "16.13.1",
+        "react-dom": "16.13.1"
+    },
+    "pre-commit": [
+        "build",
+        "test",
+        "lint",
+        "lint:css"
+    ]
 }
