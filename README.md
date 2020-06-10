@@ -168,7 +168,7 @@ import { styled } from 'linaria/react';
 
 const ImageLarge = styled.img`
     height: 9rem;
-    width: ${(props) => (props.src === yarn ? `9rem` : `auto`)};
+    width: ${(props) => (props.alt === 'yarn logo' ? `9rem` : `auto`)};
 `;
 
 const ToolLogos = () => (
