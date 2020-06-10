@@ -70,7 +70,9 @@ module.exports = (env) => {
         plugins: [
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({ template: './public/index.html' }),
-            new MiniCssExtractPlugin(),
+            new MiniCssExtractPlugin({
+                filename: 'styles-[contenthash].css',
+            }),
         ],
     };
 };

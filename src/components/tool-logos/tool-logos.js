@@ -1,40 +1,19 @@
 import React from 'react';
-import { styled } from 'linaria/react';
 
-import yarn from '../../assets/yarn.svg';
-import webpack from '../../assets/webpack.svg';
-import testingLibrary from '../../assets/testing-library.png';
-import jest from '../../assets/jest.svg';
-import eslint from '../../assets/eslint.svg';
-import stylelint from '../../assets/stylelint.svg';
-import linaria from '../../assets/linaria.png';
-
-const LogoContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-`;
-
-const ImageLarge = styled.img`
-    height: 9rem;
-    width: ${(props) => (props.src === yarn ? `9rem` : `auto`)};
-`;
-
-const ImageSmall = styled.img`
-    width: auto;
-    height: 5rem;
-`;
+import logos from '../../assets/assets';
+import { LogoContainer, ImageSmall, ImageLarge } from './styled-components';
 
 const ToolLogos = () => {
     return (
         <LogoContainer data-testid="logos">
-            <ImageLarge src={yarn} alt="yarn logo" />
-            <ImageLarge src={webpack} alt="webpack logo" />
-            <ImageSmall src={testingLibrary} alt="testing library logo" />
-            <ImageSmall src={jest} alt="jest logo" />
-            <ImageSmall src={eslint} alt="eslint logo" />
-            <ImageSmall src={stylelint} alt="stylelint logo" />
-            <ImageSmall src={linaria} alt="linaria logo" />
+            <ImageLarge src={logos.yarn} alt="yarn logo" />
+            <ImageLarge src={logos.webpack} alt="webpack logo" />
+            <ImageSmall src={logos.babel} alt="babel logo" />
+            <ImageSmall src={logos.testingLibrary} alt="testing library logo" />
+            <ImageSmall src={logos.jest} alt="jest logo" />
+            <ImageSmall src={logos.eslint} alt="eslint logo" />
+            <ImageSmall src={logos.stylelint} alt="stylelint logo" />
+            <ImageSmall src={logos.linaria} alt="linaria logo" />
         </LogoContainer>
     );
 };
