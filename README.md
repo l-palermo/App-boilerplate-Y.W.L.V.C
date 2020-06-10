@@ -82,7 +82,7 @@ JEST, REACT TESTING LIBRARY
 
 > Why? I want to learn something new and so far I mostly used Jest and Enzyme when testing React apps.
 
-React testing library has a more user-based approach to testing because it renders the component in the actual react-dom, therefore, allows the devs to write a test that simulates more closely what would be the user experience. Enzyme instead follows the concept of unit testing and therefore in isolation from the actual dom, so it is very useful to test the actual implementation of the component and assumes that as consequence the user will have the correct experience.
+React testing library has a more user-based approach to testing because it renders the component in the actual dom, therefore, allows the devs to write a test that simulates more closely what would be the user experience. Enzyme instead follows the concept of unit testing and therefore in isolation from the actual dom, so it is very useful to test the actual implementation of the component and assumes that as consequence the user will have the correct experience.
 
 Just by looking at the Testing library query selector, it is clear how the user experience is the focal point and I think also help the developer focusing more on accessibility.
 
