@@ -9,15 +9,15 @@ describe('App', () => {
 
     it('should renders the react logo', () => {
         const { getByAltText } = setupTest();
-        expect(getByAltText('react logo')).toHaveAttribute('class', 'reactLogo');
+        expect(getByAltText('react logo')).toBeInTheDocument();
     });
     it('should renders a title', () => {
         const { getByText } = setupTest();
-        expect(getByText('App Boilerplate')).toHaveClass('title');
+        expect(getByText('React App Boilerplate')).toHaveClass('title');
     });
     it('should renders a description', () => {
         const { getByText } = setupTest();
-        const text = 'This React application boilerplate uses the following core tools:';
+        const text = 'This application uses the following tools:';
         expect(getByText(text)).toHaveClass('description');
     });
     it('should render the tools logos', () => {

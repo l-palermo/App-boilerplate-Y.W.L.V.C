@@ -1,20 +1,16 @@
 import React from 'react';
 
 import './app.css';
-import reactLogo from './assets/react.svg';
-import Logos from './components/logos';
+import Logos from './components/tool-logos';
+import ReactLogo from './components/react-logo';
 
 const App = () => {
     return (
         <React.Fragment>
-            <div className="reactLogoContainer">
-                <img className="reactLogo" src={reactLogo} alt="react logo" />
-            </div>
+            <ReactLogo />
             <div className="text">
-                <div className="title">App Boilerplate</div>
-                <div className="description">
-                    This React application boilerplate uses the following core tools:
-                </div>
+                <div className="title">React App Boilerplate</div>
+                <div className="description">This application uses the following tools:</div>
             </div>
             <Logos />
         </React.Fragment>

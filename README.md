@@ -2,6 +2,9 @@
 
 This `React` application boilerplate uses the following core tools.
 
+Istruction:
+* clone the repo and run `yarn install` 'yarn run start'
+
 YARN
 
 > Yarn is an alternative command-line client to npm to handle the npmjs.com online repository.
@@ -121,12 +124,61 @@ I read about `JSLint`, `JSHint`, `StandardJS` and they all have different featur
 So `ESLint` is the winner, it provides all the functionalities listed above.
 With ESLint just run `eslint --init` answer question about my style and I get `.eslintrc.json` file with some basic config I can customise as I please family easily.
 
+I have configured ESLint to use Prettier as code formatter, this is because Prettier is an opinionated code formatter that doesn't require much settings and leaves ESLint to operate on a more syntactic level.
+
 On the CSS side, I chose `Stylelint` because has good docs and lots of config options. However, the last VSCode Stylelint plugin version didn't function with my version of VSCode so I had to install the previous one `0.83.0`.
 
 Install:
-- `yarn add -D eslint eslint-plugin-react`
-- `yarn add -D stylelint stylelint-config-standard`
+
+-   `yarn add -D eslint eslint-plugin-react`
+-   `yarn add -D stylelint stylelint-config-standard`
 
 ---
 
-CI/CD
+LINARIA
+
+Styling is a hot topic, the question is `CSS-Module` or `CSS in JS`?
+
+I honestly feel comfortable working with CSS modules, post CSS has lots of plugins that allow us to do almost everything we want with CSS resolving issues like scoping and class naming. I have already used CSS-Modules on another project so for the purpose of this exercise I go for `CSS in JS`.
+
+Most of the `CSS in JS` libraries have runtime downsides because they need to load, parse and execute JS before applying the style.
+After reading several review's articles on `CSS in JS` libraries, where `Styled components` seemed to be the winner I came across this new tool `LINARIA`.
+Linaria let writing CSS in JS with zero runtime and uses a similar API of libraries like `Styled Components` by having built-in features like scoping, nesting and vendor prefixing.
+
+Linaria allow two tipe of tags, `styled` and `css`.
+
+The `CSS` tag add allows to use imported variables and functions for logic inside the CSS code that will be evaluated at build time.
+Downsides the class name is a random alphanumeric code.
+
+```javascript
+import { css } from 'linaria';
+
+const reactLogo = css`
+    width: 30rem;
+    height: 30rem;
+`;
+
+const ReactLogo = ({ logoImage }) => <img className={reactLogo} src={logoImage} alt="react logo" />;
+```
+
+The `Styled` tag, this approach is much better than the css previous one.
+
+```javascript
+import { styled } from 'linaria/react';
+
+const ImageLarge = styled.img`
+    height: 9rem;
+    width: ${(props) => (props.src === yarn ? `9rem` : `auto`)};
+`;
+
+const ToolLogos = () => (
+    <>
+        <ImageLarge src={yarn} alt="yarn logo" />
+        <ImageLarge src={webpack} alt="webpack logo" />
+    </>
+);
+```
+
+So far I have enjoyed writing styled components with Linaria, makes the code much clearer without the need of using additional jsx tags for styling. With Linaria each styled element turns into a UI component and it naturaly drives reusability. However I still need to get my head around it, how 
+to test it and adopt it in a more complex scenario.
+Check whether there is a way to give it a custom name to the class.
