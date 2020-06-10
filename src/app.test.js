@@ -13,12 +13,12 @@ describe('App', () => {
     });
     it('should renders a title', () => {
         const { getByText } = setupTest();
-        expect(getByText('React App Boilerplate')).toHaveClass('title');
+        expect(getByText('React App Boilerplate')).toBeInTheDocument();
     });
     it('should renders a description', () => {
         const { getByText } = setupTest();
         const text = 'This application uses the following tools:';
-        expect(getByText(text)).toHaveClass('description');
+        expect(getByText(text)).toBeInTheDocument();
     });
     it('should render the tools logos', () => {
         const { getByTestId } = setupTest();

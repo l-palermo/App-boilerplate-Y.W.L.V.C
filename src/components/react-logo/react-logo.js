@@ -1,19 +1,7 @@
 import React from 'react';
-import { css } from 'linaria';
 
-import reactLogoImage from '../../assets/react.svg';
-
-const reactLogo = css`
-    width: 30rem;
-    height: 30rem;
-`;
-
-const reactLogoContainer = css`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
+import reactLogoImage from '../../assets/react.png';
+import { reactLogoContainer, reactLogo } from './style-class';
 
 const ReactLogo = () => {
     return (
