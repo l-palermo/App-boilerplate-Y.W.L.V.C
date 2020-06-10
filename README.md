@@ -3,7 +3,8 @@
 This `React` application boilerplate uses the following core tools.
 
 Istruction:
-* clone the repo and run `yarn install` 'yarn run start'
+
+-   clone the repo and run `yarn install` 'yarn run start'
 
 YARN
 
@@ -179,8 +180,21 @@ const ToolLogos = () => (
 );
 ```
 
-So far I have enjoyed writing styled-components with Linaria, makes the code much clearer without the need of using additional `.jsx` tags for styling. With Linaria, each styled element turns into a UI component and it naturally drives reusability. However I still need to get my head around it, how 
+So far I have enjoyed writing styled-components with Linaria, makes the code much clearer without the need of using additional `.jsx` tags for styling. With Linaria, each styled element turns into a UI component and it naturally drives reusability. However I still need to get my head around it, how
 to test it and adopt it in a more complex scenario.
 Class names cannot be fully customised but probably there is no need to have a clean class name. With this type of syntax, we can pass functions to css attributes and return the value we want depending on the props. More investigation needs to be done on this.
 
 One downside, the docs are good but quite small, no many plugins and there are no many discussions on the web on common issues.
+
+---
+
+CIRCLE CI
+
+The choice of a CI/CD tool focuses particularly on the product and team requirements and the CI/CD landscape is vast, therefore after doing some reading I decided to focus on Circle CI and Travis.
+The choice of a CI/CD tool is an important one because it affects productivity, speed and data security.
+
+Both Travis and Circle runs the runs in the cloud and has an easy setup. They both link easily to common cloud repositories like GitHub or BitBucket and are easily configurable even if Circle CI has a much more readable YAML file and better docs and adding CI/CD to your project is very easy. Circle CI creates a new branch with a basic config with a couple of clicks.
+
+Circle CI has high compatibility to many DB types, caching tool and coding language. Moreover, Circle CI has the ability of restarting from failing to allow the user to decide whether to start the whole build process over or to continue the job from the point of failure.
+
+The UI is very easy to use and has a fairly quick build time.
