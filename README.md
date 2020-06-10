@@ -181,4 +181,6 @@ const ToolLogos = () => (
 
 So far I have enjoyed writing styled-components with Linaria, makes the code much clearer without the need of using additional `.jsx` tags for styling. With Linaria, each styled element turns into a UI component and it naturally drives reusability. However I still need to get my head around it, how 
 to test it and adopt it in a more complex scenario.
-Check whether there is a way to give it a custom name to the class.
+Class names cannot be fully customised but probably there is no need to have a clean class name. With this type of syntax, we can pass functions to css attributes and return the value we want depending on the props. More investigation needs to be done on this.
+
+One downside, the docs are good but quite small, no many plugins and there are no many discussions on the web on common issues.
