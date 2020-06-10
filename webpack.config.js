@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env) => {
     const environment = env ? 'production' : 'development';
@@ -23,12 +24,35 @@ module.exports = (env) => {
                 {
                     test: /\.(js|jsx)$/,
                     exclude: /node_modules/,
-                    loader: 'babel-loader',
-                    options: { presets: ['@babel/env', '@babel/preset-react'] },
+                    use: [
+                        {
+                            loader: 'babel-loader',
+                        },
+                        {
+                            loader: 'linaria/loader',
+                            options: {
+                                sourceMap: environment !== 'production',
+                                presets: ['@babel/env', '@babel/preset-react'],
+                            },
+                        },
+                    ],
                 },
                 {
                     test: /\.css$/,
-                    use: ['style-loader', 'css-loader'],
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                hmr: environment !== 'production',
+                            },
+                        },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: environment !== 'production',
+                            },
+                        },
+                    ],
                 },
                 {
                     test: /\.(png|svg|jpg|gif)$/,
@@ -46,6 +70,7 @@ module.exports = (env) => {
         plugins: [
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({ template: './public/index.html' }),
+            new MiniCssExtractPlugin(),
         ],
     };
 };
