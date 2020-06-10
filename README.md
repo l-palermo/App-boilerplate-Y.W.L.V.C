@@ -103,7 +103,7 @@ Install:
 
 ESLINT, STYLELINT
 
-> Linters are cool but, those with the autocorrect (--fix) function.
+> Linters are cool but, those with the (--fix) function are even better.
 
 This is what a linter should do for me:
 
@@ -124,7 +124,7 @@ I read about `JSLint`, `JSHint`, `StandardJS` and they all have different featur
 So `ESLint` is the winner, it provides all the functionalities listed above.
 With ESLint just run `eslint --init` answer question about my style and I get `.eslintrc.json` file with some basic config I can customise as I please family easily.
 
-I have configured ESLint to use Prettier as code formatter, this is because Prettier is an opinionated code formatter that doesn't require much settings and leaves ESLint to operate on a more syntactic level.
+I have configured ESLint to use Prettier as code formatter, this is because Prettier is an opinionated code formatter that doesn't require many settings and leaves ESLint to operate on a more syntactic level.
 
 On the CSS side, I chose `Stylelint` because has good docs and lots of config options. However, the last VSCode Stylelint plugin version didn't function with my version of VSCode so I had to install the previous one `0.83.0`.
 
@@ -145,9 +145,9 @@ Most of the `CSS in JS` libraries have runtime downsides because they need to lo
 After reading several review's articles on `CSS in JS` libraries, where `Styled components` seemed to be the winner I came across this new tool `LINARIA`.
 Linaria let writing CSS in JS with zero runtime and uses a similar API of libraries like `Styled Components` by having built-in features like scoping, nesting and vendor prefixing.
 
-Linaria allow two tipe of tags, `styled` and `css`.
+Linaria allows two types of tags, `styled` and `css`.
 
-The `CSS` tag add allows to use imported variables and functions for logic inside the CSS code that will be evaluated at build time.
+The `CSS` tag add allows using imported variables and functions for logic inside the CSS code that will be evaluated at build time.
 Downsides the class name is a random alphanumeric code.
 
 ```javascript
@@ -161,7 +161,7 @@ const reactLogo = css`
 const ReactLogo = ({ logoImage }) => <img className={reactLogo} src={logoImage} alt="react logo" />;
 ```
 
-The `Styled` tag, this approach is much better than the css previous one.
+The `Styled` tag, this approach is much better than the css tag.
 
 ```javascript
 import { styled } from 'linaria/react';
@@ -179,6 +179,6 @@ const ToolLogos = () => (
 );
 ```
 
-So far I have enjoyed writing styled components with Linaria, makes the code much clearer without the need of using additional jsx tags for styling. With Linaria each styled element turns into a UI component and it naturaly drives reusability. However I still need to get my head around it, how 
+So far I have enjoyed writing styled-components with Linaria, makes the code much clearer without the need of using additional `.jsx` tags for styling. With Linaria, each styled element turns into a UI component and it naturally drives reusability. However I still need to get my head around it, how 
 to test it and adopt it in a more complex scenario.
 Check whether there is a way to give it a custom name to the class.
