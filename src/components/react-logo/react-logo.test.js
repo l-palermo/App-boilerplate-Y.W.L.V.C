@@ -7,7 +7,7 @@ const setupTest = () => render(<ReactLogo />);
 describe('React logo', () => {
     afterEach(cleanup);
     it('should render the react logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('react logo')).toBeInTheDocument();
+        const { getByRole } = setupTest();
+        expect(getByRole('img')).toHaveAttribute('alt', 'react logo');
     });
 });
