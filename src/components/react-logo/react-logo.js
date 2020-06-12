@@ -1,7 +1,8 @@
 import React from 'react';
 
 import reactLogoImage from '../../assets/react.png';
-import { reactLogoContainer, Logo } from './style-class';
+import { reactLogoContainer } from './style-class';
+import { Logo } from './styled-components';
 
 const ReactLogo = () => {
     return (
