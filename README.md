@@ -2,6 +2,8 @@
 
 This `React` application boilerplate uses the following core tools.
 
+This boilerplate is deployed at: https://app-boilerplate-y-w-l-v-c-boq9x1qu2.now.sh/
+
 Istruction:
 
 -   clone the repo and run `yarn install` 'yarn run start'
