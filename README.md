@@ -198,3 +198,7 @@ Both Travis and Circle runs the runs in the cloud and has an easy setup. They bo
 Circle CI has high compatibility to many DB types, caching tool and coding language. Moreover, Circle CI has the ability of restarting from failing to allow the user to decide whether to start the whole build process over or to continue the job from the point of failure.
 
 The UI is very easy to use and has a fairly quick build time.
+
+---
+
+VERCEL
