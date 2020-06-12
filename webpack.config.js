@@ -61,7 +61,7 @@ module.exports = (env) => {
             ],
         },
         // allows to load source map for the client dev tool
-        devtool: 'inline-source-map',
+        devtool: environment !== 'production' ? 'inline-source-map' : false,
         // define where the output will be stored in the client
         devServer: {
             contentBase: './dist',
