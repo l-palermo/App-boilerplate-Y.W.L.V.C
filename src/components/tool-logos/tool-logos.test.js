@@ -8,7 +8,7 @@ describe('Logos', () => {
     afterEach(cleanup);
     it('sould render the logos', () => {
         const { getAllByRole } = setupTest();
-        expect(getAllByRole('img')).toHaveLength(8);
+        expect(getAllByRole('img')).toHaveLength(10);
     });
     it('sould render the yarn logo', () => {
         const { getByAltText } = setupTest();
@@ -37,5 +37,17 @@ describe('Logos', () => {
     it('sould render the stylelint logo', () => {
         const { getByAltText } = setupTest();
         expect(getByAltText('stylelint logo')).toBeInTheDocument();
+    });
+    it('sould render the linaria logo', () => {
+        const { getByAltText } = setupTest();
+        expect(getByAltText('linaria logo')).toBeInTheDocument();
+    });
+    it('sould render the circleci logo', () => {
+        const { getByAltText } = setupTest();
+        expect(getByAltText('circleci logo')).toBeInTheDocument();
+    });
+    it('sould render the vercel logo', () => {
+        const { getByAltText } = setupTest();
+        expect(getByAltText('vercel logo')).toBeInTheDocument();
     });
 });
