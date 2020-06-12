@@ -33,6 +33,7 @@
         "jest": "26.0.1",
         "mini-css-extract-plugin": "0.9.0",
         "pre-commit": "1.2.2",
+        "pre-push": "0.1.1",
         "prettier": "2.0.5",
         "style-loader": "1.2.1",
         "stylelint": "13.6.0",
@@ -47,6 +48,12 @@
         "react-dom": "16.13.1"
     },
     "pre-commit": [
+        "build",
+        "test",
+        "lint",
+        "lint:css"
+    ],
+    "pre-push": [
         "build",
         "test",
         "lint",
