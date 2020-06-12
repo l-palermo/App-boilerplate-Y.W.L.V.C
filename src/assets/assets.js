@@ -6,5 +6,18 @@ import jest from './jest.svg';
 import eslint from './eslint.svg';
 import stylelint from './stylelint.svg';
 import linaria from './linaria.png';
+import circleci from './circleci.png';
+import vercel from './vercel.png';
 
-export default { yarn, webpack, babel, testingLibrary, jest, eslint, stylelint, linaria };
+export default {
+    yarn,
+    webpack,
+    babel,
+    testingLibrary,
+    jest,
+    eslint,
+    stylelint,
+    linaria,
+    circleci,
+    vercel,
+};

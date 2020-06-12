@@ -1,12 +1,12 @@
 import React from 'react';
 
 import reactLogoImage from '../../assets/react.png';
-import { reactLogoContainer, reactLogo } from './style-class';
+import { reactLogoContainer, Logo } from './style-class';
 
 const ReactLogo = () => {
     return (
         <div className={reactLogoContainer}>
-            <img className={reactLogo} src={reactLogoImage} alt="react logo" />
+            <Logo src={reactLogoImage} speed={7} alt="react logo" />
         </div>
     );
 };

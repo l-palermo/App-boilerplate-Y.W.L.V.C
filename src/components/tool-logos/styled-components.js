@@ -18,6 +18,6 @@ export const ImageLarge = styled.img`
 export const ImageSmall = styled.img`
     justify-self: center;
     width: auto;
-    height: 5rem;
+    height: ${({ size }) => (size ? `${size}rem` : `5rem`)};
     margin: 1rem;
 `;

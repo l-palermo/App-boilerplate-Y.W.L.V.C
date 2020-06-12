@@ -14,6 +14,8 @@ const ToolLogos = () => {
             <ImageSmall src={logos.eslint} alt="eslint logo" />
             <ImageSmall src={logos.stylelint} alt="stylelint logo" />
             <ImageSmall src={logos.linaria} alt="linaria logo" />
+            <ImageSmall src={logos.circleci} alt="circleci logo" />
+            <ImageSmall src={logos.vercel} alt="vercel logo" size={3.5} />
         </LogoContainer>
     );
 };

@@ -1,8 +1,9 @@
 import { css } from 'linaria';
+import { styled } from 'linaria/react';
 
 import { mqMedium } from '../../constants.js';
 
-export const reactLogo = css`
+export const Logo = styled.img`
     height: 12rem;
     margin: 3rem;
 
@@ -15,7 +16,11 @@ export const reactLogo = css`
             transform: rotate(360deg);
         }
     }
-    animation: rotate 3s linear infinite;
+
+    animation-name: rotate;
+    animation-duration: ${({ speed }) => `${speed}s`};
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 `;
 
 export const reactLogoContainer = css`

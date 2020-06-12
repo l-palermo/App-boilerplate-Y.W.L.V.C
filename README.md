@@ -89,11 +89,10 @@ Just by looking at the Testing library query selector, it is clear how the user 
 
 ---
 
-GIT ACTIONS, PRECOMMIT HOOKS
+PRECOMMIT HOOKS
 
-> Git actions and pre-commit hooks are very useful tools that help developers to make sure the work they commit or merge is 'not' introducing bugs.
+> Pre-commit hooks are very useful tools that help developers to make sure the work they commit or merge is 'not' introducing bugs.
 
-Git actions are very easy to install and customise.
 As pre-commit tools I have chosen `pre-commit` that is very easy to initiate, just need a small config in the package.json with the commands we want to run before committing the changes. The alternative to pre-commit is `Husky`. I have used `husky` in another repo and this is also very easy to config. `Husky` is more popular and has more config options.
 
 Install:
@@ -190,15 +189,21 @@ One downside, the docs are good but quite small, no many plugins and there are n
 
 CIRCLE CI
 
-The choice of a CI/CD tool focuses particularly on the product and team requirements and the CI/CD landscape is vast, therefore after doing some reading I decided to focus on Circle CI and Travis.
-The choice of a CI/CD tool is an important one because it affects productivity, speed and data security.
+The choice of a CI/CD tool is lead in particular by-product and team requirements. Choosing the wrong tool might affect productivity, speed and data security.
+The CI/CD landscape is vast, therefore after doing some reading I decided to focus on Circle CI and Travis by the time I have happily used Github Actions on another project.
 
 Both Travis and Circle runs the runs in the cloud and has an easy setup. They both link easily to common cloud repositories like GitHub or BitBucket and are easily configurable even if Circle CI has a much more readable YAML file and better docs and adding CI/CD to your project is very easy. Circle CI creates a new branch with a basic config with a couple of clicks.
 
-Circle CI has high compatibility to many DB types, caching tool and coding language. Moreover, Circle CI has the ability of restarting from failing to allow the user to decide whether to start the whole build process over or to continue the job from the point of failure.
+Circle CI has high compatibility to many DB types, caching tool and coding language. Moreover, Circle CI has the ability to restart from failing to allow the user to decide whether to start the whole build process over or to continue the job from the point of failure.
 
 The UI is very easy to use and has a fairly quick build time.
 
 ---
 
 VERCEL
+
+Vercel is a super easy to use hosting provider, it quickly connects to your repo and only needs you to specify the output folder path and the build command then takes care of everything else and update the deployment build every time a branch is merged to master.
+
+However, these functionalities are common to may hosting provider so why did I choose Vercel.
+
+I wanted to a 'free' deployment/hosting provider with a really easy to use interface and that can easily scale without additional settings.
