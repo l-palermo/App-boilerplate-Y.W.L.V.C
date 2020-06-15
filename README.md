@@ -54,7 +54,7 @@ Webpack is still the most solid bundler. The configuration is very customisable,
 
 What I like about webpack and similar building tools is that I can directly see what loaders and plugins my code depends on, this allows me to consider more carefully the dependencies I decide to add to the code base. This means more control over the final built.
 
-Webpack has also some downsides.
+Webpack has also some downside.
 Dead code elimination or tree-shaking is not as efficient, the bundle size can still be large if compared with other contenders.
 Code splitting requires some thoughts and settings. It allows 3 approaches for this: define multiple entry points, CommonChunckPlugin, Dynamic imports. The contenders do this automatically but for learning's purposes are good to give it some thoughts.
 
