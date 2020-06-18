@@ -6,7 +6,7 @@ This boilerplate is deployed at: https://app-boilerplate-y-w-l-v-c.now.sh
 
 Istruction:
 
--   clone the repo and run `yarn install` 'yarn run start'
+-   clone the repo and run `yarn install` `yarn run start`
 
 YARN
 
