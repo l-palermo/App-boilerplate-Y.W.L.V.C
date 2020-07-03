@@ -2,15 +2,18 @@ import React from 'react';
 
 import Logos from './components/tool-logos';
 import ReactLogo from './components/react-logo';
-import { Title, Description } from './styled-components';
+import Header from './components/header';
+import logos from './assets/assets';
 
 const App = () => {
     return (
         <React.Fragment>
             <ReactLogo />
-            <Title>React App Boilerplate</Title>
-            <Description>This application uses the following tools:</Description>
-            <Logos />
+            <Header
+                title="React App Boilerplate"
+                subTitle="This application uses the following tools:"
+            />
+            <Logos logos={logos} />
         </React.Fragment>
     );
 };
