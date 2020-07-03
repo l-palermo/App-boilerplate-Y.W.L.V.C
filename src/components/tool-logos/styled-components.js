@@ -9,15 +9,12 @@ export const LogoContainer = styled.div`
     margin: 0 10rem;
 `;
 
-export const ImageLarge = styled.img`
+export const Image = styled.img`
     justify-self: center;
-    height: ${({ alt }) => (alt === 'yarn logo' ? `4rem` : `6rem`)};
     width: ${({ alt }) => (alt === 'yarn logo' ? `9rem` : `auto`)};
-`;
-
-export const ImageSmall = styled.img`
-    justify-self: center;
-    width: auto;
-    height: ${({ size }) => (size ? `${size}rem` : `5rem`)};
+    height: ${({ alt, size }) => {
+        if (size) return `${size}rem`;
+        return alt === 'yarn logo' ? `4rem` : `5rem`;
+    }};
     margin: 1rem;
 `;

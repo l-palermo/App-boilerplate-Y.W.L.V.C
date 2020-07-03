@@ -2,52 +2,26 @@ import React from 'react';
 
 import ToolLogos from './tool-logos';
 
-const setupTest = () => render(<ToolLogos />);
+const requiredProps = {
+    logos: [
+        { src: 'test', alt: 'alt' },
+        { src: 'test1', alt: 'alt1' },
+    ],
+};
 
-describe('Logos', () => {
+const setupTest = () => render(<ToolLogos {...requiredProps} />);
+
+describe('Tool logos', () => {
     afterEach(cleanup);
-    it('sould render the logos', () => {
+    it('should render the logos container', () => {
+        const { getByTestId } = setupTest();
+
+        const container = getByTestId('logos-container');
+        expect(container).toBeVisible();
+    });
+    it('should render the logos', () => {
         const { getAllByRole } = setupTest();
-        expect(getAllByRole('img')).toHaveLength(10);
-    });
-    it('sould render the yarn logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('yarn logo')).toBeInTheDocument();
-    });
-    it('sould render the webpack logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('webpack logo')).toBeInTheDocument();
-    });
-    it('sould render the webpack logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('babel logo')).toBeInTheDocument();
-    });
-    it('sould render the testing library logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('testing library logo')).toBeInTheDocument();
-    });
-    it('sould render the jest logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('jest logo')).toBeInTheDocument();
-    });
-    it('sould render the eslint logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('eslint logo')).toBeInTheDocument();
-    });
-    it('sould render the stylelint logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('stylelint logo')).toBeInTheDocument();
-    });
-    it('sould render the linaria logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('linaria logo')).toBeInTheDocument();
-    });
-    it('sould render the circleci logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('circleci logo')).toBeInTheDocument();
-    });
-    it('sould render the vercel logo', () => {
-        const { getByAltText } = setupTest();
-        expect(getByAltText('vercel logo')).toBeInTheDocument();
+        const logo = getAllByRole('img');
+        expect(logo).toHaveLength(2);
     });
 });

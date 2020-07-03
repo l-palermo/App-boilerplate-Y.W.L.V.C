@@ -1,6 +1,6 @@
 import { styled } from 'linaria/react';
 
-import { mqMedium } from '../../constants.js';
+import { mqMedium } from '../constants';
 
 export const Logo = styled.img`
     height: 12rem;
