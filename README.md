@@ -1,4 +1,11 @@
-# App-boilerplate-Y.W.L.DO.C.
+# App-boilerplate-Y.W.L.V.C.
+
+`todos:`
+
+> back to a stable version of webpack or resolve warnings
+
+> improve webpack config where possible
+
 
 This `React` application boilerplate uses the following core tools.
 
